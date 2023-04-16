@@ -17,7 +17,6 @@ import static data.DataGenerator.getRandomPassword;
 public class AuthTest {
     @BeforeEach
     void setup() {
-        Configuration.headless = true;
         Configuration.holdBrowserOpen = true;
         open("http://localhost:9999");
     }
@@ -78,4 +77,3 @@ public class AuthTest {
         $(".notification__content").shouldHave(Condition.ownText("Неверно указан логин или пароль"));
     }
 }
-
